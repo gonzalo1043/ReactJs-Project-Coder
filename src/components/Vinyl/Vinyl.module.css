@@ -1,0 +1,71 @@
+
+.img {
+    width: 200px;
+    border-radius: 30px;
+}
+
+.vinyl{
+    width: 240px;
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0.297);
+    border-radius: 20px;
+    height: 410px;
+    border-color: white;
+    cursor: pointer;
+}
+
+.discountText{
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: rgb(255, 147, 17);
+}
+
+.beforePrice{
+    color: rgb(117, 115, 115);
+    margin-bottom: 0px;
+    
+}
+
+.price{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0px;
+}
+
+.name{ 
+    font-size: 25px;
+    margin-top: 5px;
+}
+.artist{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(117, 115, 115);
+}
+
+.cardFooter{
+    background-color: rgb(59, 59, 59);
+    border-radius: 20px;
+}
+
+.newReleasesText{
+    color:#5775fb
+}
+
+.buttonDetail{ 
+    background-color: #5D3891;
+    border-radius: 15px;
+    padding: 6px;
+    color: black;
+}
+
+.buttonDetail:hover{
+    filter: drop-shadow(0 0 0.1em rgb(123, 120, 116));
+}
+
+.vinyl:hover{
+    filter: drop-shadow(0 0 0.5em rgb(255, 147, 17));
+}

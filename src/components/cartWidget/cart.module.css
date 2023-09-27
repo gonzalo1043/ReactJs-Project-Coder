@@ -1,0 +1,22 @@
+
+.carritoIcon {
+    height: 40px;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+    padding: 0px;
+}
+
+.carritoIcon:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.numeroCarrito{
+    margin-top: -37px;
+    color: rgb(255, 147, 17);
+    font-size: 20px;
+}
+
+.Cart{
+background-color: transparent;
+}
