@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import VynilList from '../VinylList/VinylList'
+import VinylList from '../VinylList/VinylList'
 import { useParams } from 'react-router-dom'
 import classes from './items.module.css'
 import { getVinyls } from '../../service/Firestore/vinyls'
@@ -34,7 +34,7 @@ return (<>
         <main>
                 <div>
                         <h1 className={classes.greeting}>{greeting}</h1>
-                        <VynilList vinyl={vinyl} />
+                        <VinylList vinyl={vinyl} />
                 </div>
         </main>
         </>)

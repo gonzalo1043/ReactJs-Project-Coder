@@ -1,4 +1,4 @@
-import VynilList from '../VinylList/VinylList'
+import VinylList from '../VinylList/VinylList'
 import { useParams } from 'react-router-dom'
 import classes from '../itemsListContainer/items.module.css'
 import { db } from '../../service/Firebase/firebaseCongif'
@@ -21,7 +21,7 @@ const ItemsListContainerNR = ({greeting}) => {
         <main>
                 <div>
                         <h1 className={classes.greeting}>{greeting}</h1>
-                        <VynilList vinyl={vinyl} />
+                        <VinylList vinyl={vinyl} />
                 </div>
         </main>
         </>)

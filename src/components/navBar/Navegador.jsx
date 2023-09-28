@@ -18,7 +18,6 @@ const NavBar = ()=> {
     </div>
     
     <div className={classes.NavDer}>
-    {/* <Search/> */}
     <CartWidget className={classes.cart}/>
     </div>
     

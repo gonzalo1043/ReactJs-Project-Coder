@@ -5,10 +5,12 @@ export const createAdaptedVinylFromFirestore = (doc) => {
     const vinylAdapted = {
         id: doc.id,
         nombre: fields.nombre,
+        artista: fields.artista,
         img: fields.img,
         stock: fields.stock,
         categoria: fields.categoria,
-        precio: fields.precio
+        precio: fields.precio,
+        descuento: fields.descuento
     }
 
     return vinylAdapted
