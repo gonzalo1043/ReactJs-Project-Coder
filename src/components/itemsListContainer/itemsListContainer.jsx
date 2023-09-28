@@ -21,8 +21,6 @@ function ItemsListContainer  ({greeting}) {
                         .then(querySnapshot => {
                                 const vinylsAdapted = querySnapshot.docs.map(doc => {
                                         const fields = doc.data()
-                                console.log(fields)
-
                                 return {id: doc.id, ...fields}
                         })
                         setVinyl(vinylsAdapted)

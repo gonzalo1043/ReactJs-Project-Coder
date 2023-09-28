@@ -10,7 +10,7 @@ const Titulo = () => {
     <nav className="navbar bg-body-tertiary">
     <div onClick={() => navigate('/')} className={classes.pointer}>
         <img src={tituloLogo} alt="Logo" width="200" height="200" className="d-inline-block align-text-top"></img>
-        <h1 >VV VINYL</h1>
+        <h1 className='navBarTitle' >VV VINYL</h1>
     </div>
     </nav>)
 }

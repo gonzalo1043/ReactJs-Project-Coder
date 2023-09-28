@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
 import VynilList from '../VinylList/VinylList'
 import { useParams } from 'react-router-dom'
-import classes from './items.module.css'
+import classes from '../itemsListContainer/items.module.css'
 import { db } from '../../service/Firebase/firebaseCongif'
 import { getDocs, collection, query, where  } from 'firebase/firestore'
 import { useGetDocs } from '../../Hooks/getDocsHook'

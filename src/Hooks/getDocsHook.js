@@ -12,8 +12,6 @@ export const useGetDocs = (asyncFunction, dependencies = []) => {
             .then(result => {
                 const vinylsAdapted = result.docs.map(doc => {
                     const fields = doc.data()
-                    console.log(fields)
-
             return {id: doc.id, ...fields}
             })
                 setData(vinylsAdapted)

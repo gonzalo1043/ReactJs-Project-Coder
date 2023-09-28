@@ -15,8 +15,6 @@ const CategoryContainer = () => {
         .then(querySnapshot => {
             const categoriesAdapted = querySnapshot.docs.map(doc => {
                     const fields = doc.data()
-            console.log(fields)
-
             return {id: doc.id, ...fields}
     })
     setCategories(categoriesAdapted)

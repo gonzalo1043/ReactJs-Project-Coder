@@ -1,6 +1,3 @@
-
-import Button from '../navBarPartes/buttons'
-import Search from '../navBarPartes/buscar'
 import Titulo from '../navBarPartes/titulo'
 import { NavLink } from 'react-router-dom'
 import classes from './Navegador.module.css'

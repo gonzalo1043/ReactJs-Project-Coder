@@ -1,9 +1,19 @@
-.NavCategory{
+/* .NavCategory{
     margin-top: 40px;
-}
+} */
 
 
 .buttonC{
     margin: 10px;
-    color: rgb(255, 147, 17) ;
+    color: black ;
+    background-color:  rgb(255, 147, 17)  ;
+    font-size: 20px;
+    border-radius: 30px;
+    padding: 5px 25px 10px 25px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+}
+
+.buttonC:hover {
+    filter: drop-shadow(0 0 0.1em rgb(155, 145, 153));
 }

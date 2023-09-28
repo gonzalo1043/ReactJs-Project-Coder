@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import {getVinylById} from "../../AsyncMock"
 import { useParams } from "react-router-dom"
 import VinylDetail from "../VinylDetail/VinylDetail"
 import { db } from "../../service/Firebase/firebaseCongif"
@@ -17,7 +16,6 @@ useEffect(() => {
     const vinylRef = doc(db, 'vinyls', vinylId)
 
     getDoc(vinylRef).then(documentSnapshot => {
-        console.log(documentSnapshot)
         const fields = documentSnapshot.data()
         const vinylAdapted = {id: documentSnapshot.id, ...fields}
         setVinyl(vinylAdapted)
@@ -34,7 +32,7 @@ if(loading) {
 
 return (
     <main>
-        <h1>Detalle del producto</h1>
+        <h1 className="detailTitle">Detalle del producto</h1>
         <VinylDetail {... vinyl} />
     </main>
 )

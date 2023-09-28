@@ -9,10 +9,10 @@ const Notification = ({data}) => {
     
         toast(data.text, {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 4000,
         hideProgressBar: true,
         closeOnClick: false,
-        pauseOnHover: false,
+        pauseOnHover: true,
         draggable: true,
         progress: undefined,
         theme: data.type === "dark" ? 'dark' : 'light',
