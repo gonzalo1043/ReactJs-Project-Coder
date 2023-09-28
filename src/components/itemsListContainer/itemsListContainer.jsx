@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 import VynilList from '../VinylList/VinylList'
 import { useParams } from 'react-router-dom'
 import classes from './items.module.css'
-import { db } from '../../service/Firebase/firebaseCongif'
-import { getDocs, collection, query, where  } from 'firebase/firestore'
+import { getVinyls } from '../../service/Firestore/vinyls'
 
 
 function ItemsListContainer  ({greeting}) {
@@ -14,17 +13,11 @@ function ItemsListContainer  ({greeting}) {
 
 
         useEffect(()=> {
-                
-                const vinylsRef = !categoryId ? collection(db, 'vinyls') : query(collection(db, 'vinyls'), where('categoria', '==', categoryId ))
-
-                getDocs(vinylsRef)
-                        .then(querySnapshot => {
-                                const vinylsAdapted = querySnapshot.docs.map(doc => {
-                                        const fields = doc.data()
-                                return {id: doc.id, ...fields}
-                        })
-                        setVinyl(vinylsAdapted)
-                }).catch(error => {
+                getVinyls(categoryId)
+                .then(vinyls => {
+                        setVinyl(vinyls)
+                })
+                .catch(error => {
                         console.log(error)
                 }).finally(()=> {
                         setLoading(false)

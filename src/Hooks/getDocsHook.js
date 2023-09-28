@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { createAdaptedVinylFromFirestore } from '../adapters/createAdaptedVinylFromFirestore'
 
 export const useGetDocs = (asyncFunction, dependencies = []) => {
     const [data, setData] = useState([])
@@ -11,8 +12,7 @@ export const useGetDocs = (asyncFunction, dependencies = []) => {
         asyncFunction()
             .then(result => {
                 const vinylsAdapted = result.docs.map(doc => {
-                    const fields = doc.data()
-            return {id: doc.id, ...fields}
+                    return createAdaptedVinylFromFirestore(doc)
             })
                 setData(vinylsAdapted)
         })

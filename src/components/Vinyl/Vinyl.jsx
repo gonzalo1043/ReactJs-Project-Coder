@@ -36,7 +36,7 @@ const Vinyl = ({nombre, artista, id, precio, img, descuento, newReleases}) => {
                 
                 </Card.Text>
                 <Card.Text>
-                    <Link className='buttonDetailCard' to = {`/vinylDetail/${id}`} >Ver detalle</Link>
+                    <Link className='buttonDetailCard' to = {`/vinylDetail/${id}`} >Detalle</Link>
                 </Card.Text>
                 </Card.Body>
             </Card>

@@ -32,7 +32,7 @@ const Cart = () => {
                                     </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
-                                    <button onClick={() => removeItem(vinyl.id)}>remove</button>
+                                    <button onClick={() => removeItem(vinyl.id)}>X</button>
                                     </Card.Footer>
                                 </Card>
                             </div>

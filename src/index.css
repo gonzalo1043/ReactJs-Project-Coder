@@ -241,7 +241,8 @@ h2{
       border-radius: 10px;
       padding: 5px 15px 10px 15px;
       color: rgba(255, 148, 17, 0.729);
-      font-size: 20px;
+      font-size: 17px;
+      font-family: 'Martian Mono', monospace;
     }
 
     .botonFinalizarCompra:hover{

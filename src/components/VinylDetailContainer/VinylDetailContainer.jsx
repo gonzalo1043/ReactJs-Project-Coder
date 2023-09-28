@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import VinylDetail from "../VinylDetail/VinylDetail"
 import { db } from "../../service/Firebase/firebaseCongif"
 import { getDoc, doc } from "firebase/firestore"
+import { getVinylById } from "../../service/Firestore/vinyls"
 
 
 
@@ -12,14 +13,11 @@ const VinylDetailContainer = () => {
     const [loading, setLoading] = useState(true)
 
 useEffect(() => {
-
-    const vinylRef = doc(db, 'vinyls', vinylId)
-
-    getDoc(vinylRef).then(documentSnapshot => {
-        const fields = documentSnapshot.data()
-        const vinylAdapted = {id: documentSnapshot.id, ...fields}
-        setVinyl(vinylAdapted)
-    }).catch(error => {
+    getVinylById(vinylId)
+    .then(vinyls => {
+        setVinyl(vinyls)
+    })
+    .catch(error => {
         console.log(error)
     }).finally(()=> {
         setLoading(false)

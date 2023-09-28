@@ -9,12 +9,14 @@ import { useNotification } from "../../Notification/NotificationService"
 const Checkout = () => {
 
     const {setNotification} = useNotification()
-    const [loading, setLoading] = useState(false)
     const {cart, total, clearCart} = useCart()
+    
+    const [loading, setLoading] = useState(false)
     const [activateBoton, setActivateBoton] = useState(false)
+    const [formData, setFormData] = useState({firstName: '', lastName: '', mail:'', phone: ''})
+
     const navigate = useNavigate()
     const {register, handleSubmit, formState:{errors}} = useForm()
-    const [formData, setFormData] = useState({firstName: '', lastName: '', mail:'', phone: ''})
 
     
 

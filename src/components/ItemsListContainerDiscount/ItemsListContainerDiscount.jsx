@@ -1,6 +1,5 @@
 
 
-import { useEffect, useState } from 'react'
 import VynilList from '../VinylList/VinylList'
 import { useParams } from 'react-router-dom'
 import classes from '../itemsListContainer/items.module.css'
